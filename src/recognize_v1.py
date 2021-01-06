@@ -21,7 +21,7 @@ def load_known_faces():
 			face_locations = face_recognition.face_locations(image)
 			
 			# Pick the first one and get its encoding
-			face_encodings = face_recognition.face_encodings(image, face_locations[0])
+			face_encodings = face_recognition.face_encodings(image, [ face_locations[0] ])
 			
 			# Store the processed face
 			known_face_encodings.append(face_encodings[0])
